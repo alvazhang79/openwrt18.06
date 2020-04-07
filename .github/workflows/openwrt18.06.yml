@@ -119,6 +119,8 @@ jobs:
           # 编译UEFI固件:
             cat >> .config <<EOF
             CONFIG_EFI_IMAGES=y
+            CONFIG_TARGET_KERNEL_PARTSIZE=16
+            CONFIG_TARGET_ROOTFS_PARTSIZE=2048
             EOF
           # IPv6支持:
           # cat >> .config <<EOF
@@ -126,14 +128,15 @@ jobs:
           # CONFIG_PACKAGE_ipv6helper=y
           # EOF
           # 多文件系统支持:
-          # cat >> .config <<EOF
+          cat >> .config <<EOF
           # CONFIG_PACKAGE_kmod-fs-nfs=y
           # CONFIG_PACKAGE_kmod-fs-nfs-common=y
           # CONFIG_PACKAGE_kmod-fs-nfs-v3=y
           # CONFIG_PACKAGE_kmod-fs-nfs-v4=y
           # CONFIG_PACKAGE_kmod-fs-ntfs=y
           # CONFIG_PACKAGE_kmod-fs-squashfs=y
-          # EOF
+          CONFIG_PACKAGE_kmod-fs-exfat=y
+          EOF
           # USB3.0支持:
            cat >> .config <<EOF
            CONFIG_PACKAGE_kmod-usb-ohci=y
@@ -147,9 +150,9 @@ jobs:
             CONFIG_PACKAGE_luci-app-adbyby-plus=y
             CONFIG_PACKAGE_luci-app-aria2=y
             CONFIG_PACKAGE_luci-app-baidupcs-web=y
-          # CONFIG_PACKAGE_luci-app-docker=y
-          # CONFIG_PACKAGE_luci-lib-docker=y
-          # CONFIG_PACKAGE_luci-app-dockerman=y
+          CONFIG_PACKAGE_luci-app-docker=y
+          CONFIG_PACKAGE_luci-lib-docker=y
+          CONFIG_PACKAGE_luci-app-dockerman=y
             CONFIG_PACKAGE_luci-app-diskman=y
             CONFIG_PACKAGE_luci-app-aliddns=y
             CONFIG_PACKAGE_luci-app-rclone=y
@@ -201,7 +204,7 @@ jobs:
             CONFIG_PACKAGE_luci-app-chinadns=y
             CONFIG_PACKAGE_luci-app-cifs=y
             CONFIG_PACKAGE_luci-app-cifsd=y
-          # CONFIG_PACKAGE_luci-app-banip=y
+          CONFIG_PACKAGE_luci-app-banip=y
             CONFIG_PACKAGE_luci-app-brook-server=y
           # CONFIG_PACKAGE_luci-app-commands=y
             CONFIG_PACKAGE_luci-app-control-mia=y
@@ -217,11 +220,11 @@ jobs:
             CONFIG_PACKAGE_luci-app-mjpg-streamer=y
           # CONFIG_PACKAGE_luci-app-n2n_v2=y
             CONFIG_PACKAGE_luci-app-nfs=y
-          # CONFIG_PACKAGE_luci-app-ocserv=y
-          # CONFIG_PACKAGE_luci-app-oscam=y
+          CONFIG_PACKAGE_luci-app-ocserv=y
+          CONFIG_PACKAGE_luci-app-oscam=y
           # CONFIG_PACKAGE_luci-app-samba4=y
             CONFIG_PACKAGE_luci-app-softethervpn5=y
-          # CONFIG_PACKAGE_luci-app-speederv2=y
+          CONFIG_PACKAGE_luci-app-speederv2=y
             CONFIG_PACKAGE_luci-app-ssr-libev-server=y
             CONFIG_PACKAGE_luci-app-ssr-python-pro-server=y
             CONFIG_PACKAGE_luci-app-transmission=y
