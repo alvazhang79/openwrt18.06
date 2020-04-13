@@ -123,6 +123,8 @@ jobs:
             CONFIG_TARGET_ROOTFS_PARTSIZE=2048
             CONFIG_KERNEL_BUILD_USER="Alva"
             CONFIG_GRUB_TITLE="OpenWrt AutoBuild by Alva"
+            CONFIG_POSIX_MQUEUE=y
+            CONFIG_POSIX_MQUEUE_SYSCTL=y
             CONFIG_KERNEL_POSIX_MQUEUE=y
             EOF
           # IPv6支持:
