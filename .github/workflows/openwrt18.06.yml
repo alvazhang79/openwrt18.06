@@ -242,7 +242,7 @@ jobs:
             CONFIG_PACKAGE_luci-app-cifsd=y
           CONFIG_PACKAGE_luci-app-banip=y
             CONFIG_PACKAGE_luci-app-brook-server=y
-          # CONFIG_PACKAGE_luci-app-commands=y
+          CONFIG_PACKAGE_luci-app-commands=y
             CONFIG_PACKAGE_luci-app-control-mia=y
             CONFIG_PACKAGE_luci-app-control-timewol=y
             CONFIG_PACKAGE_luci-app-control-webrestriction=y
@@ -288,6 +288,9 @@ jobs:
            CONFIG_PACKAGE_tree=y
            CONFIG_PACKAGE_vim-fuller=y
            CONFIG_PACKAGE_wget=y
+           CONFIG_PACKAGE_kmod-kvm-amd=y
+           CONFIG_PACKAGE_kmod-kvm-intel=y
+           CONFIG_PACKAGE_kmod-kvm-x86=y
            EOF
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
            cat >> .config <<EOF
