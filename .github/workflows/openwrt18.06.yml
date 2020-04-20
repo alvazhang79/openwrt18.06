@@ -237,8 +237,6 @@ jobs:
             CONFIG_PACKAGE_luci-app-ssr-plus-lean=y
             CONFIG_PACKAGE_luci-app-airplay2=y
             CONFIG_PACKAGE_luci-app-music-remote-center=y 
-            # CONFIG_PACKAGE_luci-app-vssr-plus=y
-            # CONFIG_PACKAGE_luci-app-ssr-plus=y
             CONFIG_PACKAGE_luci-app-advanced-reboot=y
             CONFIG_PACKAGE_luci-app-amule=y
             CONFIG_PACKAGE_luci-app-appfilter=y
